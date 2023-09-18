@@ -1,0 +1,57 @@
+
+.experiences {
+    text-align: center;
+    background-color: #764949;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .experiences h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+   
+    letter-spacing: 2px;
+  }
+  
+  .experiences p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .experiences p::after {
+    content: '...';
+    display: inline;
+    color: #007acc;
+    margin-left: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(245, 245, 245, 0), #f5f5f5 50%);
+    padding: 0 10px;
+  }
+  
+  .experiences p:hover {
+    color: #0099cc;
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .experiences h2 {
+      font-size: 28px;
+    }
+    
+    .experiences p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  
