@@ -33,6 +33,13 @@ body {
   .modal-content {
     background: linear-gradient(to right, #7f7f7f, #baaa80);
   }
+  .titleee a{
+    color: #333;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
   .Cover{
     display: flex;
     justify-content: space-between;
@@ -138,6 +145,16 @@ body.dark-theme {
     font-size: 24px;
     font-family: monospace;
     font-weight: 900;
+  }
+  .titleee a{
+    color: #fff;
+  }
+  .descriptionn{
+    color: #fff;
+   
+  }
+  .titlee a{
+    color: #c2bfbf;
   }
   .Cover a i{
     background: linear-gradient(to right, #465369, #5b3ddd);
