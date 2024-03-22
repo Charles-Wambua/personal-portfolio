@@ -9,13 +9,13 @@ export const Projects = () => {
   const projects = [
     {
       title: (
-        <a href="https://machakoscdf-api.onrender.com/" className="tittle">
+        <a href="/" className="tittle">
           {" "}
           My Recipes App
         </a>
       ),
       year: "2023",
-      image: "/recipes.jpg",
+      image: "/recipes.PNG",
       description:
         "I built this app using React Native. I used an open api to fetch the recipes. The icons in this project are from iconify",
     },
