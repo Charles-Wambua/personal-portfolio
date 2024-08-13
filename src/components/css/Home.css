@@ -1,408 +1,115 @@
-/* Reset some default styles */
-body,
-html,
-h1,
-h2,
-h3,
-p,
-ul,
-li,
-button,
-input {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-/* Set up body styles for light theme with light gold color */
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-    to right,
-    #fbdd70,
-    #baaa80
-  ); /* Light gold gradient background */
-  color: #333; /* Default text color */
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  .modal-content {
-    background: linear-gradient(to right, #7f7f7f, #baaa80);
-  }
-  .titleee a{
-    color: #333;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 400;
-    padding-bottom: 10px;
-  }
-  .Cover{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .Cover a i{
-    background: linear-gradient(to right, #c5c5c5, #baaa80);
-    padding: 10px;
-    border-radius: 50px;
-    color: #000;
-  }
-  .footer {
-    background: linear-gradient(to right, #131311, #baaa80);
-    color: #fff;
-    padding-bottom: 40px;
-    padding: 10;
-  }
-  .Cover{
-    top: 0;
-  }
-
-  .title {
-    background: linear-gradient(to right, #fbdd70, #baaa80);
-    color: #000;
-  }
-  .skills {
-    background: linear-gradient(to right, #7f7f7f, #baaa80);
-    color: #000;
-  }
-  .containers {
-    background-color: #cabbbb;
-  }
-
-  .buttton {
-    background: linear-gradient(to right, #d6967f, #ff4c29);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 25px;
-  }
-
-  .buttton:hover {
-    background: linear-gradient(to right, #ff4c29, #ff7f50);
-  }
-
-  .buttton:active {
-    background: linear-gradient(to right, #ff4c29, #ff7f50);
-  }
-
- 
-  .social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #101818;
-    text-decoration: none;
-  }
-
-  .social-icons a i {
-    font-size: 16px;
-    background: linear-gradient(to right, #7f7f7f, #f0efea);
-    border-radius: 25px;
-    padding: 10px;
-    color: #241a18;
-  }
-  .about {
-    background: linear-gradient(to right, #7f7f7f, #baaa80);
-  }
-  .project {
-    background-color: #f1eeee;
-  }
-  .about-me {
-    background-color: #f1eeee;
-    color: #000000;
-  }
-  .about h2 {
-    color: #251f1f;
-  }
- 
-  .black-and-thin {
-    color: black;
-    font-weight: 100; 
-  }
-  .text-accent {
-    color: #3e3e3e;
-    font-size: 24px;
-    font-family: monospace;
-    font-weight: 900;
-  }
-  .n-n {
-    color: #ff4c29;
-    font-size: 40px;
-  }
-}
-
-body.dark-theme {
-  background: linear-gradient(to right, #5b3ddd, #465369);
-  color: #fff; 
-  .text-accent {
-    color: #dfdddd;
-    font-size: 24px;
-    font-family: monospace;
-    font-weight: 900;
-  }
-  .titleee a{
-    color: #fff;
-  }
-  .descriptionn{
-    color: #fff;
-   
-  }
-  .titlee a{
-    color: #c2bfbf;
-  }
-  .Cover a i{
-    background: linear-gradient(to right, #465369, #5b3ddd);
-    padding: 10px;
-    border-radius: 50px;
-    color: #c2bfbf;
-  }
-  .social-icons a i {
-    font-size: 16px;
-    background: linear-gradient(to right, #465369, #5b3ddd);
-    border-radius: 25px;
-    padding: 10px;
-    color: #eee9e8;
-  }
-  .n-n {
-    color: #e7e4e4;
-    font-size: 40px;
-  }
-  .footer {
-    background: linear-gradient(to right, #359cea, #2f4fd2);
-    color: #fff;
-    padding-bottom: 40px;
-    padding: 10;
-  }
-  .modal-content {
-    background: linear-gradient(to right, #465369, #5b3ddd);
-    color: #fff;
-  }
-  .about {
-    background-color: #cabbbb;
-  }
-  .about h2 {
-    color: #fff;
-  }
-  .title {
-    background: linear-gradient(to right, #5b3ddd, #465369);
-    color: #fff;
-  }
-  .project {
-    background-color: rgb(54, 54, 168);
-  }
-  .skills {
-    background: linear-gradient(to right, #465369, #5b3ddd);
-    color: #fff;
-  }
-  .skills h3 {
-    color: #fff;
-  }
-  .buttton {
-    background: linear-gradient(to right, #333, #000);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 25px;
-  }
-  .descriptionContainer {
-    background-color: rgb(54, 54, 168);
-  }
-
-  .buttton:hover {
-    background: linear-gradient(to right, #ff4c29, #ff7f50);
-  }
-
-  .buttton:active {
-    background: linear-gradient(to right, #ff4c29, #ff7f50);
-  }
-  .containers {
-    background-color: #007bff;
-  }
-
-  .social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    color: rgb(189, 219, 245);
-    text-decoration: none;
-  }
-
-  .social-icons a i {
-    font-size: 16px;
-  }
-  .about-me {
-    background-color: rgb(54, 54, 168);
-    color: rgb(236, 241, 245);
-  }
-  .about h2 {
-    color: #eeecec;
-  }
-  .about {
-    background: linear-gradient(to right, #465369, #5b3ddd);
-  }
-}
-
-
+/* General styles for the home component */
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
-  /* justify-content: center; */
-  height: 90vh;
+  justify-content: center;
+  min-height: 100vh;
   text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
 }
 
+/* Styling for the cover section with social media icons */
+.Cover {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
+.Cover a {
+  color: var(--text-color);
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.Cover a:hover {
+  color: var(--primary-color);
+}
+
+/* Styling for the name section */
 .name {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-
-.switchbox {
   margin-top: 20px;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 70px;
-  height: 34px;
+.nm {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.switch input[type="checkbox"] {
-  display: none;
+.n-n {
+  color: var(--primary-color);
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
+/* Animation for the text under the name */
+.mtion {
+  margin: 20px 0;
+  font-size: 1.2rem;
 }
-
-.slider:before {
-  position: absolute;
-  content: "\1F319"; 
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-
-input[type="checkbox"]:checked + .slider {
-  background-color: #8c98a1;
-}
-
-input[type="checkbox"]:checked + .slider::before {
-  content: "\1F4A1"; 
-  transform: translateX(26px);
-}
-
 
 /* Button styles */
-.button {
-  background-color: #007bff;
-  color: #fff;
+.buttton {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
   border: none;
   padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Links styles */
-.social-icons {
+.buttton:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Social links section */
+.links {
   margin-top: 20px;
 }
 
 .social-icons a {
-  margin-right: 10px;
-  font-size: 24px;
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  color: var(--text-color);
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #333;
+  color: var(--primary-color);
 }
 
-/* Animation styles */
-.mtion {
-  margin-top: 20px;
-  font-size: 18px;
+/* Theme switch styles */
+.switchbox {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 
-
-@media screen and (max-width: 768px) {
-  .name {
-    font-size: 28px;
-  }
-
-  .button {
-    font-size: 14px;
-  }
-
-  .mtion {
-    font-size: 16px;
-  }
-
-  .social-icons a {
-    font-size: 20px;
-  }
-}
-.buttton {
-  background: linear-gradient(to right, #d6967f, #ff4c29);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin: 25px;
-}
-.buttton:hover {
-  background: linear-gradient(to right, #ff4c29, #ff7f50);
-}
-
-.buttton:active {
-  background: linear-gradient(to right, #ff4c29, #ff7f50);
-}
-.links {
-  padding: 5px;
-  padding-bottom: 0px;
-}
-.social-icons {
+.switchbox label {
   margin-left: 10px;
-  color: aliceblue;
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #101818;
-  text-decoration: none;
+/* Light theme specific variables */
+
+/* Icon animation for laptop code icon */
+.fa-laptop-code {
+  animation: fadeInUp 2s ease;
 }
 
-.social-icons a i {
-  font-size: 16px;
+/* Fade in animation for laptop code icon */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
+ 

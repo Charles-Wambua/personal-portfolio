@@ -1,62 +1,180 @@
+import React from "react";
+import { Flex, Progress } from "antd";
+import { green } from "@ant-design/colors";
 import "./css/Skills.css";
+import { useTheme } from "@mui/material/styles";
+
 export const Skills = () => {
+  const theme = useTheme();
   return (
-    <div className="skills" id="skills">
+    <div
+      className="skills"
+      id="skills"
+      style={{
+        marginRight: 0,
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
+      }}
+    >
       <div className="title">
         <h3>Skills</h3>
       </div>
       <div className="categories">
         <div className="containers">
-          <i class="devicon-javascript-plain colored"></i>
+          <i className="devicon-javascript-plain  "></i>
           Javascript
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-react-original"></i>
+          <i className="devicon-react-original"></i>
           ReactJs
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-typescript-plain colored"></i>
+          <i className="devicon-typescript-plain"></i>
           TypeScript
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-react-original-wordmark colored"></i>
+          <i className="devicon-react-original-wordmark  "></i>
           React Native
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-django-plain colored"></i>
+          <i className="devicon-django-plain  "></i>
           Django
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-express-original colored"></i>
+          <i className="devicon-express-original  "></i>
           Express
-        </div>{" "}
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
+        </div>
         <div className="containers">
-          <i class="devicon-nodejs-plain-wordmark colored"></i>
+          <i className="devicon-nodejs-plain-wordmark  "></i>
           Nodejs
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-python-plain colored"></i>
+          <i className="devicon-python-plain  "></i>
           Python
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-mysql-plain colored"></i>
+          <i className="devicon-mysql-plain  "></i>
           My SQL
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-mongodb-plain colored"></i>
+          <i className="devicon-mongodb-plain  "></i>
           MongoDB
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-tensorflow-original colored"></i>
-          Tensoflow
+          <i className="devicon-tensorflow-original  "></i>
+          TensorFlow
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-docker-plain colored"></i>
+          <i className="devicon-docker-plain  "></i>
           Docker
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
         <div className="containers">
-          <i class="devicon-git-plain colored"></i>
+          <i className="devicon-git-plain  "></i>
           Git
+          <Flex gap="small" vertical>
+            <Progress
+              percent={100}
+              steps={5}
+              size="small"
+              strokeColor={green[6]}
+            />
+          </Flex>
         </div>
       </div>
     </div>

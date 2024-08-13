@@ -2,28 +2,10 @@ import "./css/Home.css";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { useState } from "react";
-import { useEffect } from "react";
-export const Home = () => {
-  const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'dark');
+import Switch from '@mui/material/Switch';
 
-  useEffect(() => {
-    if (isDark) {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDark]);
+export const Home = ({ isDark, toggleTheme }) => {
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
-
-
-
- 
   function openWhatsAppLink() {
     window.open(
       "https://wa.me/254114652533",
@@ -31,6 +13,7 @@ export const Home = () => {
       "noopener noreferrer"
     );
   }
+
   return (
     <>
       <div className="Cover">
@@ -127,11 +110,13 @@ export const Home = () => {
           </div>
         </div>
         <div className="switchbox">
-          <label class="switch">
-            <input type="checkbox" id="themeSwitch" onChange={toggleTheme}/>
-            <span class="slider"></span>
-           
-          </label>
+          <Switch 
+            checked={isDark} 
+            onChange={toggleTheme} 
+            color="primary" 
+            inputProps={{ 'aria-label': 'theme switch' }} 
+          />
+          <label>{isDark ? "Dark Mode" : "Light Mode"}</label>
         </div>
       </div>
     </>
