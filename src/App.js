@@ -5,9 +5,9 @@ import Switch from '@mui/material/Switch';
 import { Home } from './components/Home';
 import { About } from './components/About'
 import Projects from './components/Projects';
-import Skillls from './components/skii';
+// import Skillls from './components/skii';
 import "./App.css"
-import CustomizedTimeline from './components/ex';
+// import CustomizedTimeline from './components/ex';
 import { Skills } from './components/Skills';
 
 const darkTheme = createTheme({
@@ -121,7 +121,7 @@ export default function App() {
       <Home />
       <About/>
       <Projects/>
-      <CustomizedTimeline/>
+      {/* <CustomizedTimeline/> */}
       <Skills/>
     </ThemeProvider>
   );
