@@ -1,13 +1,17 @@
 
-.projects {
+.projecs {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  /* margin-bottom: 3%; */
 }
-.custom-modal {
+/* .custom-modal {
   background-color: var(--mui-background-paper);
   color: var(--mui-text-primary);
   border-radius: var(--mui-shape-borderRadius);
   padding: var(--mui-spacing);
+} */
+.custom-card{
+  margin: 5px;
 }
-

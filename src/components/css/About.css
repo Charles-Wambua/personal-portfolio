@@ -1,45 +1,72 @@
 .about {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding-bottom: 60px;
+  padding: 30px;
+  height: "auto";
+}
+
+.aboutme {
+  display: flex;
+  flex: 0 0 calc(33.33% - 10px);
+  z-index: 1;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.about-me {
+  flex: 0 0 calc(33.33% - 10px);
+  width: auto;
+  height: auto;
+  margin: 0px;
+  border: 5px;
+  border-radius: 10px;
+  background-color: var(--about-me-bg);
+  line-height: 2;
+  padding: 5%;
+}
+
+.about-me img {
+  width: 90%;
+  height: auto;
+  padding-bottom: 0px;
+  position: relative;
+  padding: 10px;
+}
+
+.charles {
+  color: #ff4c29;
+}
+
+@media (max-width: 760px) {
+  .aboutme {
     min-height: auto;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 60px;
-    padding: 30px;
-    height: 100vh;
-    
   }
-  
-  .about h2 {
-    color: var(--accent-color);
-  }
-  
-  .aboutme {
-    display: flex;
-    flex: 0 0 calc(33.33% - 10px);
-    width: auto;
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    color: var(--text-color);
-    /* font-size: 10px; */
-  }
-  
+
   .about-me {
-    flex: 0 0 calc(33.33% - 10px);
+    flex: 0 0 calc(33.33% - 20px);
     width: auto;
     height: auto;
-    margin: 0px;
+
     border: 5px;
     border-radius: 10px;
     background-color: var(--about-me-bg);
-    line-height: 2;
-    padding: 5%;
+    line-height: auto;
+    text-align: left;
+    font-size: large;
   }
-  
+
   .about-me img {
     width: 90%;
     height: auto;
@@ -47,38 +74,4 @@
     position: relative;
     padding: 10px;
   }
-  
-  .charles {
-    color: #ff4c29;
-  }
-  
-  @media (max-width: 760px) {
-    .aboutme {
-      min-height: auto;
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .about-me {
-      flex: 0 0 calc(33.33% - 20px);
-      width: auto;
-      height: auto;
-      /* margin: 10px; */
-      border: 5px;
-      border-radius: 10px;
-      background-color: var(--about-me-bg);
-      line-height: auto;
-      text-align: left;
-      font-size: large;
-    }
-  
-    .about-me img {
-      width: 90%;
-      height: auto;
-      padding-bottom: 0px;
-      position: relative;
-      padding: 10px;
-    }
-  }
-  
+}

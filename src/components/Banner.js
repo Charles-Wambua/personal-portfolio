@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import "./css/back.css"
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import "./css/back.css";
 
-const Banner = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+const Banner = ({ isDarkTheme, onToggleTheme }) => {
 
-  const handleThemeToggle = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
 
   return (
     <div className={isDarkTheme ? "dark-theme" : "light-theme"}>
@@ -17,21 +16,39 @@ const Banner = () => {
               id="toggle-theme"
               type="checkbox"
               checked={isDarkTheme}
-              onChange={handleThemeToggle}
+              onChange={onToggleTheme}
             />
             <span className="light-txt">light</span>
             <span className="dark-txt">dark</span>
           </label>
           <h1>
-            Transparent <br /> Modern <br /> Property
+            DEV <br /> Charles <br /> Wambua
           </h1>
           <div className="inner-desc">
             <p>
-              We are here to make your journey to a new home, simple and
-              memorable. So we decided to bring you a platform that allows you
-              to browse through millions of property listings across 900+ cities
-              in India. Now buying and renting comes with the freedom of ease
-              and comfort.
+            <motion.div
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="mtion"
+        >
+          <span className="mi-4"> </span>
+          <TypeAnimation
+            sequence={[
+              "FULL STACK DEVELOPER",
+              2000,
+              "MOBILE APP DEVELOPER",
+              2000,
+              "DEVOPS AND CLOUD ENGINEER",
+              2000,
+            ]}
+            speed={50}
+            className="text-accent"
+            wrapper="span"
+            repeat={Infinity}
+          />
+        </motion.div>
             </p>
             <form>
               <div className="form-group d-flex flex-wrap">
@@ -39,10 +56,10 @@ const Banner = () => {
                   type="text"
                   className="form-control"
                   id="exampleInputtext1"
-                  placeholder="Enter zipcode to search properties here"
+                  placeholder="Type message here"
                 />
                 <button type="submit" className="black-btn">
-                  Search
+                  message me
                 </button>
               </div>
             </form>
@@ -50,40 +67,70 @@ const Banner = () => {
           <div className="social-icons d-flex align-items-center">
             <ul className="d-flex">
               <li>
-                <a href="#" target="_blank" rel="noreferrer">
-                  <i className="fa fa-facebook" aria-hidden="true"></i>
+                <a
+                  href="https://wa.me/254114652533"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-whatsapp"></i>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noreferrer">
-                  <i className="fa fa-instagram" aria-hidden="true"></i>
-                </a>
+              <a
+              href="https://www.instagram.com/thatsme.charles/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noreferrer">
-                  <i className="fa fa-twitter" aria-hidden="true"></i>
-                </a>
+              <a
+              href="https://twitter.com/Charles59676543"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
               </li>
+              <li>  <a
+              href="https://github.com/Charles-Wambua"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a></li>
+              <li> <a
+              href="https://www.linkedin.com/in/charles-wambua-918a0724a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a></li>
+            
             </ul>
-            <span>Follow us</span>
+            <span className="sss">My Socials</span>
           </div>
         </div>
         <div className="banner-right d-flex">
           <div className="family">
             <img
-              src="https://yudiz.com/codepen/real-estate/property-img-one.png"
+              // src="https://yudiz.com/codepen/real-estate/property-img-one.png"
+              src="/assets/1f87b29a2df46100a75aa86b170a21cb.jpg"
               alt="img"
               className="img-fluid"
             />
             <img
-              src="https://yudiz.com/codepen/real-estate/property-img-two.png"
+              // src="https://yudiz.com/codepen/real-estate/property-img-two.png"
+                src="/assets/78313357198a836e64cc07f7fab3da8b.jpg"
+            
               alt="img"
               className="img-fluid"
             />
             <div className="banner-right-inner">
-              <h2>42k+</h2>
+              <h2>100+</h2>
               <span>
-                satisfied <br /> family
+                completed <br /> projects
               </span>
               <img
                 src="https://yudiz.com/codepen/real-estate/heart-icon.svg"
@@ -92,11 +139,13 @@ const Banner = () => {
               />
             </div>
             <img
-              src="https://yudiz.com/codepen/real-estate/property-img-three.png"
+              // src="https://yudiz.com/codepen/real-estate/property-img-three.png"
+               src="/assets/e7e9437b012c8d40acaa501be5afafa3.jpg"
               alt="img"
               className="img-fluid"
             />
             <img
+              // src="https://yudiz.com/codepen/real-estate/property-img-four.png"
               src="https://yudiz.com/codepen/real-estate/property-img-four.png"
               alt="img"
               className="img-fluid"
@@ -104,7 +153,7 @@ const Banner = () => {
           </div>
           <div className="sale">
             <img
-              src="https://yudiz.com/codepen/real-estate/property-img-five.png"
+              src="/assets/10ee98130fcb4261135dce02f701518a.jpg"
               alt="img"
               className="img-fluid"
             />
@@ -114,9 +163,9 @@ const Banner = () => {
               className="img-fluid"
             />
             <div className="banner-right-inner">
-              <h2>30k+</h2>
+              <h2>3+</h2>
               <span>
-                Available <br /> Unit for Sale
+                Years <br /> Of Experience
               </span>
               <img
                 src="https://yudiz.com/codepen/real-estate/unit-icon.svg"
@@ -137,6 +186,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

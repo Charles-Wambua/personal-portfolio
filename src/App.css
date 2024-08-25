@@ -6,6 +6,7 @@ body {
   padding: 0;
 }
 
+
 body, h1, h2, h3, h4, h5, h6, p, span, div, a, li{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -22,6 +23,22 @@ p {
 .App {
   text-align: center;
 }
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+
+/* body p {
+  max-width: 400px;
+  margin: 20px auto;
+} */
+.modal {
+  background-color: red;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -42,7 +59,7 @@ p {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 
 .App-link {

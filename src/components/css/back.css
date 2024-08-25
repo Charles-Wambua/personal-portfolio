@@ -18,6 +18,186 @@
   --green-color: #88ffc6;
 }
 
+.projects{
+  overflow: hidden;
+  min-height: 820px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+
+}
+.skills::after,
+.projects::after{
+  content: "";
+  position: absolute;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  top: 0;
+  right: 0%;
+  width: 0%;
+  background: #111;
+  height: 100%;
+}
+.about {
+  height: 100vh;
+  overflow: hidden;
+  min-height: 820px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  position: relative;
+  margin-right: 0;
+}
+.dark-theme .projecs h2{
+  color: #ecf0f1 ;
+}
+.dark-theme .skills{
+  background-color: #111;
+--text-primary-color: #ecf0f1; 
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.dark-theme .about {
+  background-color: #222;
+  --background-paper-color: #222; 
+  --text-primary-color: #ecf0f1; 
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+/* .light-theme .skills, */
+
+
+.light-theme .about{
+  background-color: #F0F0F0;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+ .about::after{
+  content: "";
+  position: absolute;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  top: 0;
+  right: 0%;
+  width: 0%;
+  /* background: #222; */
+  height: 100%;
+}
+.dark-theme .projecs{
+  background-color: #111;
+}
+
+
+
+.dark-theme .skills::after,
+.dark-theme .projects::after,
+.dark-theme .about::after{
+  content: "";
+  width: 100%;
+}
+.skills h2,
+.about h2 {
+  color: var(--text-primary-color);
+}
+
+/* .aboutme {
+ 
+  border: 1px solid var(--grey-border);
+  border-radius: 8px;
+  
+} */
+
+.light-theme .aboutme {
+  --grey-border: #bdc3c7; 
+  --aboutme-background-color: #e6f2ff; 
+  --aboutme-text-color: #34495e; 
+}
+.dark-theme .containers,
+.dark-theme .custom-card{
+  --grey-border: #95a5a6; 
+  --card-background-color: #34495e; 
+  --card-text-color: #ecf0f1; 
+}
+.light-theme .custom-card {
+  --grey-border: #bdc3c7; 
+  --card-background-color: #e6f2ff; 
+  --card-text-color: #34495e; 
+}
+.dark-theme .aboutme {
+  --grey-border: #95a5a6; 
+  --aboutme-background-color: #444; 
+  --aboutme-text-color: #ecf0f1; 
+}
+
+.about-me {
+  background-color: var(--about-me-background-color);
+  padding: 15px;
+  border-radius: 8px;
+}
+.light-theme .custom-card,
+.light-theme .about-me {
+  background-color: #fff;
+  border: 1px solid #ECFFFB;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+/* General styling for custom-header */
+.custom-header {
+  background-color: #f8f9fa; /* Light mode background color */
+  color: #212529; /* Light mode text color */
+}
+
+/* Dark mode specific styling */
+.dark-theme .custom-header {
+  background-color: #333; /* Dark mode background color */
+  color: #f8f9fa; /* Dark mode text color */
+}
+
+/* Modal specific styling for dark mode */
+.dark-theme .custom-modal .modal-content {
+  background-color: #333; /* Dark mode modal content background */
+  color: #f8f9fa; /* Dark mode text color */
+}
+
+/* Dark mode for modal buttons */
+.dark-theme .custom-modal .btn-secondary {
+  background-color: #666;
+  border-color: #555;
+  color: #f8f9fa;
+}
+
+.dark-theme .custom-modal{
+  background-color: #444; 
+  border: 1px solid #666;
+}
+.dark-theme .containers,
+.dark-theme .custom-card,
+.dark-theme .about-me {
+  background-color: #444; 
+  border: 1px solid #666;
+  color: #ccc;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.charles {
+  color: var(--charles-text-color);
+}
+
+.light-theme .charles {
+  --charles-text-color: #16a085; 
+}
+
+.dark-theme .charles {
+  --charles-text-color: #1abc9c; 
+}
+
+
 .d-flex {
   display: flex;
   display: -webkit-flex;
@@ -102,13 +282,14 @@ li {
   top: 0;
   right: 0%;
   width: 0%;
-  background: #000;
+  background: #111;
   height: 100%;
 }
 .dark-theme .banner::after {
   content: "";
   width: 100%;
 }
+
 
 .banner-left {
   width: 70%;
@@ -196,6 +377,9 @@ li {
 .switch.checked::before {
   left: 50%;
 }
+.dark-theme .sss{
+  color: #fff;
+}
 .switch.checked .dark-txt {
   color: #000;
 }
@@ -208,7 +392,7 @@ li {
   width: 70%;
   font-size: 16px;
   line-height: 20px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--black-color);
 }
 .dark-theme .banner-left .form-control {
