@@ -68,6 +68,10 @@
   transition: all 1s;
   -webkit-transition: all 1s;
 }
+.dark-theme .footer{
+  background-color: #121212;
+  color: #ffffff;
+}
 /* .light-theme .skills, */
 
 

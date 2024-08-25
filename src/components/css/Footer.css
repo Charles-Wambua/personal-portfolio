@@ -59,20 +59,20 @@
     color: #888;
   }
  
-  .light-theme {
+  /* .light-theme {
     background-color: #f5f5f5;
     color: #333;
-  }
+  } */
   
   .light-theme .social-links a:hover {
     color: #0056b3;
   }
   
-  .dark-theme {
+  /* .dark-theme {
     background-color: #121212;
     color: #ffffff;
   }
-  
+   */
   .dark-theme .social-links a:hover {
     color: #1e90ff;
   }
