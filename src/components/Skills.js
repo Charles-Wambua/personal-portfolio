@@ -79,7 +79,7 @@ export const Skills = ({ isDarkTheme }) => {
               />
             </Flex>
           </div>
-          <div className="containers">
+          {/* <div className="containers">
             <i className="devicon-django-plain  "></i>
             Django
             <Flex gap="small" vertical>
@@ -90,7 +90,7 @@ export const Skills = ({ isDarkTheme }) => {
                 strokeColor="#88FFC6"
               />
             </Flex>
-          </div>
+          </div> */}
           <div className="containers">
             <i className="devicon-express-original  "></i>
             Express
@@ -151,7 +151,7 @@ export const Skills = ({ isDarkTheme }) => {
               />
             </Flex>
           </div>
-          <div className="containers">
+          {/* <div className="containers">
             <i className="devicon-tensorflow-original  "></i>
             TensorFlow
             <Flex gap="small" vertical>
@@ -162,7 +162,7 @@ export const Skills = ({ isDarkTheme }) => {
                 strokeColor="#88FFC6"
               />
             </Flex>
-          </div>
+          </div> */}
           <div className="containers">
             <i className="devicon-docker-plain  "></i>
             Docker
@@ -188,7 +188,7 @@ export const Skills = ({ isDarkTheme }) => {
             </Flex>
           </div>
 
-          <div className="containers">
+          {/* <div className="containers">
             <i className="devicon-react-original"></i>
             ReactJs
             <Flex gap="small" vertical>
@@ -199,7 +199,7 @@ export const Skills = ({ isDarkTheme }) => {
                 strokeColor="#88FFC6"
               />
             </Flex>
-          </div>
+          </div> */}
           <div className="containers">
             <i className="devicon-googlecloud-plain"></i>
             Google Cloud
