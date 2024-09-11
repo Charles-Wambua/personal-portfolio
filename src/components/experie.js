@@ -64,7 +64,8 @@ const Experience = ({ isDarkTheme }) => {
           <div className="row">
             <div className="col-lg-12 heading">
               <h2>Experience</h2>
-              <p>Internship and projects experience</p>
+              <p>Professional Experience, Projects, and Internships</p>
+
             </div>
             <div className="experience_container">
               <ul className="timeline">
@@ -85,8 +86,9 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-content">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title"></h4>
+                      <h4 className="timeline-title">Software Engineer</h4>
                     </div>
+
                     <div className="timeline-body">
                       <p>
                         <b>Company:</b> Roam Electric
@@ -123,7 +125,7 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-panel">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">2023.08 - 2023.12</h4>
+                      <h4 className="timeline-title">2023.01 - 2023.06</h4>
                       <p>
                         <small className="text-muted">
                           <span className="fa fa-map-marker"></span> Nairobi,
