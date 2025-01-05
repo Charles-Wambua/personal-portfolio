@@ -50,7 +50,7 @@ const Footer = ({ isDarkTheme }) => {
         
         <div className="footer-info">
           <p className="footer-text">
-            © 2024 Charles Wambua. All rights reserved.
+            ©2025 Charles Wambua. All rights reserved.
           </p>
           <p className="contact-info">
             <strong>Email:</strong> <a href="mailto:cm3290006@gmail.com.com">cm3290006@gmail.com</a>

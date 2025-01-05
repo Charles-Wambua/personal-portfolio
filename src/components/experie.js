@@ -75,7 +75,43 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-panel">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">2024.03 - Present</h4>
+                      <h4 className="timeline-title">2024.10 - Present</h4>
+                      <p>
+                        <small className="text-muted">
+                          <span className="fa fa-map-marker"></span> Remote,
+                          Kenya
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="timeline-content">
+                    <div className="timeline-heading">
+                      <h4 className="timeline-title">Software Engineer</h4>
+                    </div>
+
+                    <div className="timeline-body">
+                      <p>
+                        <b>Company:</b> VenerTech Solutions
+                        <br />
+                        <b>Introduction:</b> VenerTech Solutions is an IT Solutions company that offers System support and IT Consulting services to Businesses.
+                        <br />
+                        <b>Contribution:</b> As the main Software Engineer at the startup, I lead the full-stack development, DevOps, and deployment processes, building scalable web applications with real-time functionality using WebSockets. I am responsible for architecting and implementing the backend, designing intuitive frontend interfaces, managing cloud infrastructure, and ensuring seamless CI/CD pipelines. My role requires end-to-end ownership of the software lifecycle, from development and testing to deployment and monitoring, while optimizing system performance to meet the dynamic needs of a growing business.
+                        <br />
+                        <b>Skills:</b>Full-Stack Development, WebSockets, React.js, Node.js, Express.js, PostgreSQL, MongoDB, REST APIs, CI/CD Pipelines, DevOps, Cloud Infrastructure (GCP, AWS), Docker, Kubernetes, Agile Development, Real-Time Communication, Version Control (Git), Unit Testing, System Monitoring and Optimization.
+                        <br />
+                        <b>Main Tools:</b> Git, JIRA, Docker,Gitlab, Slack,
+                        Clickup, Sentry, Pagerduty,GCP, pgAdmin
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="timeline-badge default">
+                    <span className="fab fa-gratipay"></span>
+                  </div>
+                  <div className="timeline-panel">
+                    <div className="timeline-heading">
+                      <h4 className="timeline-title">2024.01 - 2024.10</h4>
                       <p>
                         <small className="text-muted">
                           <span className="fa fa-map-marker"></span> Nairobi,
@@ -95,7 +131,7 @@ const Experience = ({ isDarkTheme }) => {
                         <br />
                         <b>Introduction:</b> Roam Electric is a leading company
                         in the electric vehicle industry, focusing on
-                        sustainable transportation solutions. I am part of the
+                        sustainable transportation solutions. I was part of the
                         team responsible for developing and maintaining various
                         software solutions that support the company's products
                         and services.
@@ -125,10 +161,10 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-panel">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">2023.01 - 2023.06</h4>
+                      <h4 className="timeline-title">2023.01 - 2023.11</h4>
                       <p>
                         <small className="text-muted">
-                          <span className="fa fa-map-marker"></span> Nairobi,
+                          <span className="fa fa-map-marker"></span> Remote,
                           Kenya
                         </small>
                       </p>
@@ -137,7 +173,7 @@ const Experience = ({ isDarkTheme }) => {
                   <div className="timeline-content">
                     <div className="timeline-heading">
                       <h4 className="timeline-title">
-                        Software Development Intern
+                        Software Developer
                       </h4>
                     </div>
                     <div className="timeline-body">
@@ -145,10 +181,7 @@ const Experience = ({ isDarkTheme }) => {
                         <b>Company:</b> TechA
                         <br />
                         <b>Introduction:</b> TechA is a technology solutions
-                        provider specializing in web and app development. During
-                        my internship, I was involved in various development
-                        projects aimed at enhancing the company's digital
-                        presence and client offerings.
+                        provider specializing in web and app development. 
                         <br />
                         <b>Contribution:</b> Contributed to the development of
                         several websites and mobile applications. Worked with a
@@ -173,8 +206,7 @@ const Experience = ({ isDarkTheme }) => {
                       <h4 className="timeline-title">2022.05 - Present</h4>
                       <p>
                         <small className="text-muted">
-                          <span className="fa fa-map-marker"></span> Nairobi,
-                          Nakuru, Online
+                          <span className="fa fa-map-marker"></span>WorldWide🌏
                         </small>
                       </p>
                     </div>

@@ -163,7 +163,7 @@ const Banner = ({ isDarkTheme, onToggleTheme }) => {
               className="img-fluid"
             />
             <div className="banner-right-inner">
-              <h2>3+</h2>
+              <h2>4+</h2>
               <span>
                 Years <br /> Of Experience
               </span>

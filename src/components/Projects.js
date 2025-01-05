@@ -205,7 +205,7 @@ export default function Projects({ isDarkTheme }) {
       <div className="projecs">
         <div className="col-lg-12 heading">
           <h2>Projects</h2>
-          <p>Collection of completed and ongoing projects</p>
+          <p>Collection some of my solo projects</p>
         </div>
 
         <div className="projects">
