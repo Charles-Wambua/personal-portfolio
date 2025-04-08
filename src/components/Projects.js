@@ -43,7 +43,7 @@ export default function Projects({ isDarkTheme }) {
           Diva International
         </a>
       ),
-      year: "2023",
+      year: "2022",
       images: ["/assets/diva1.PNG", "/assets/diva2.PNG", "/assets/diva3.PNG"],
       description:
         "Diva International is a dynamic marketing platform designed to empower users to earn income through referrals and service purchases. The platform allows users to seamlessly engage with the system, track their referral progress, and access a variety of services, all within a user-friendly interface. This project highlights my ability to create robust, scalable solutions tailored to meet the needs of a growing digital marketplaceF",
@@ -147,7 +147,7 @@ export default function Projects({ isDarkTheme }) {
           Gaming analyser
         </a>
       ),
-      year: "2022",
+      year: "2021",
       images: ["/assets/ef3.PNG", "/assets/ef2.PNG", "/assets/ef1.PNG"],
       description:
         "A gaming website dedicated to eFootball enthusiasts with the latest updates and content. It has a user-friendly interface for hosting tournaments, generating fixtures, and calculating results for each participant.",

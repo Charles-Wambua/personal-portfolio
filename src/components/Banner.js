@@ -139,13 +139,12 @@ const Banner = ({ isDarkTheme, onToggleTheme }) => {
               />
             </div>
             <img
-              // src="https://yudiz.com/codepen/real-estate/property-img-three.png"
+
                src="/assets/e7e9437b012c8d40acaa501be5afafa3.jpg"
               alt="img"
               className="img-fluid"
             />
             <img
-              // src="https://yudiz.com/codepen/real-estate/property-img-four.png"
               src="https://yudiz.com/codepen/real-estate/property-img-four.png"
               alt="img"
               className="img-fluid"

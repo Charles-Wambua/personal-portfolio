@@ -78,7 +78,7 @@ const Experience = ({ isDarkTheme }) => {
                       <h4 className="timeline-title">2024.10 - Present</h4>
                       <p>
                         <small className="text-muted">
-                          <span className="fa fa-map-marker"></span> Remote,
+                          <span className="fa fa-map-marker"></span> Nairobi,
                           Kenya
                         </small>
                       </p>
@@ -86,7 +86,7 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-content">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">Software Engineer</h4>
+                      <h4 className="timeline-title">Lead Software Engineer</h4>
                     </div>
 
                     <div className="timeline-body">
@@ -161,10 +161,10 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-panel">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">2023.01 - 2023.11</h4>
+                      <h4 className="timeline-title">2021.02 - 2023.10</h4>
                       <p>
                         <small className="text-muted">
-                          <span className="fa fa-map-marker"></span> Remote,
+                          <span className="fa fa-map-marker"></span> Nairobi,
                           Kenya
                         </small>
                       </p>
@@ -173,30 +173,63 @@ const Experience = ({ isDarkTheme }) => {
                   <div className="timeline-content">
                     <div className="timeline-heading">
                       <h4 className="timeline-title">
-                        Software Developer
+                        Software Engineer
+                      </h4>
+                    </div>
+                    <div className="timeline-body">
+                      <p>
+                        <b>Company:</b> Andela, Nairobi, Kenya
+                        <br />
+                        <b>Introduction:</b> Andela is a global talent network that connects companies with vetted engineers from emerging markets. Based in Nairobi, the local team contributes to world-class tech solutions across industries.
+                        <br />
+                        <b>Contribution:</b> Played a key role in building cross-platform applications and dynamic websites using Next.js and FastAPI. Collaborated closely with other developers to implement scalable, high-performance features. Focused on clean code, component reusability, and seamless API integration.
+                        <br />
+                        <b>Skills:</b> Next.js, FastAPI, PostgreSQL, React.js, TypeScript, Node.js
+                        <br />
+                        <b>Main Tools:</b> Git, JIRA, Visual Studio Code, GitLab, Postman
+                      </p>
+                    </div>
+                  </div>
+
+                </li>
+                <li>
+                  <div className="timeline-badge default">
+                    <span className="fab fa-gratipay"></span>
+                  </div>
+                  <div className="timeline-panel">
+                    <div className="timeline-heading">
+                      <h4 className="timeline-title">2020.01 - 2020.06</h4>
+                      <p>
+                        <small className="text-muted">
+                          <span className="fa fa-map-marker"></span> Remote, Kenya
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="timeline-content">
+                    <div className="timeline-heading">
+                      <h4 className="timeline-title">
+                        Software Developer Apprentice
                       </h4>
                     </div>
                     <div className="timeline-body">
                       <p>
                         <b>Company:</b> TechA
                         <br />
-                        <b>Introduction:</b> TechA is a technology solutions
-                        provider specializing in web and app development. 
+                        <b>Introduction:</b> TechA is a technology solutions provider focusing on web and mobile app development across diverse industries.
                         <br />
-                        <b>Contribution:</b> Contributed to the development of
-                        several websites and mobile applications. Worked with a
-                        team to design, develop, and test new features using
-                        modern web technologies. Gained hands-on experience with
-                        project management tools and collaborative workflows.
+                        <b>Experience:</b> This apprenticeship was a pivotal point in my career, offering hands-on exposure to real-world development workflows. I worked closely with a supportive team to build and maintain websites and mobile applications while learning to navigate version control, task tracking, and agile methodologies.
                         <br />
-                        <b>Skills:</b> HTML5, CSS3, JavaScript, React.js,
-                        NextJs, Postgres, Express.js Node.js
+                        <b>Growth:</b> Gained practical experience in full-stack development, responsive design, RESTful APIs, and collaborative coding practices. This role sparked my passion for clean, maintainable code and scalable architecture.
                         <br />
-                        <b>Main Tools:</b> Git, JIRA, Visual Studio Code, Gitlab
+                        <b>Skills:</b> HTML5, CSS3, JavaScript, React.js, Next.js, PostgreSQL, Express.js, Node.js
+                        <br />
+                        <b>Main Tools:</b> Git, JIRA, Visual Studio Code, GitLab
                       </p>
                     </div>
                   </div>
                 </li>
+
                 <li>
                   <div className="timeline-badge default">
                     <span className="fab fa-gratipay"></span>
@@ -246,7 +279,7 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-panel">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">2021.01 - 2021.12</h4>
+                      <h4 className="timeline-title">2020.01 - present</h4>
                       <p>
                         <small className="text-muted">
                           <span className="fa fa-map-marker"></span> Remote
@@ -262,27 +295,17 @@ const Experience = ({ isDarkTheme }) => {
                     </div>
                     <div className="timeline-body">
                       <p>
-                        <b>Scope:</b> Undertook various self-initiated projects
-                        to explore new technologies and enhance personal skills.
-                        These projects range from developing innovative web
-                        applications and mobile apps to experimenting with new
-                        frameworks and tools.
+                        <b>Scope:</b> Dedicated personal time to building several projects aimed at solving real-world problems and exploring emerging technologies. These projects have helped strengthen my skills across full-stack development and software architecture.
                         <br />
-                        <b>Contribution:</b> Designed and implemented several
-                        projects from scratch, including personal websites,
-                        utility tools, and experimental applications. These
-                        projects provided opportunities to apply and refine
-                        knowledge in various programming languages, frameworks,
-                        and deployment techniques.
+                        <b>Contribution:</b> Successfully developed and deployed multiple web and mobile applications. Actively contributed to open-source software, collaborated with other developers online, and participated in hackathons and coding challenges. These efforts have expanded my understanding of scalable systems, clean code practices, and modern dev workflows.
                         <br />
-                        <b>Skills:</b> React.js, Node.js, Python, Django,
-                        JavaScript, Firebase, Docker
+                        <b>Skills:</b> React.js, Next.js, FastAPI, Node.js, Python, PostgreSQL, TypeScript, Docker, Firebase
                         <br />
-                        <b>Main Tools:</b> GitHub, VS Code, Firebase, Docker,
-                        Heroku
+                        <b>Main Tools:</b> GitHub, VS Code, Docker, Vercel, Netlify, Railway, Firebase
                       </p>
                     </div>
                   </div>
+
                 </li>
                 <li>
                   <div className="timeline-badge default">
@@ -290,7 +313,7 @@ const Experience = ({ isDarkTheme }) => {
                   </div>
                   <div className="timeline-panel">
                     <div className="timeline-heading">
-                      <h4 className="timeline-title">2021.01 - Present</h4>
+                      <h4 className="timeline-title">2019.01 - 2022.10</h4>
                       <p>
                         <small className="text-muted">
                           <span className="fa fa-map-marker"></span> Remote

@@ -31,7 +31,7 @@ export const About = ({ isDarkTheme }) => {
                 knack for crafting innovative solutions. My expertise spans web
                 and mobile application development, DevOps, and cloud
                 engineering, with a strong focus on the MERN stack (MongoDB,
-                Express, React, Node.js). I excel in designing scalable
+                Express, React, Node.js) and T3 Stack. I excel in designing scalable
                 architectures, automating processes, and implementing CI/CD
                 pipelines for seamless deployments. Additionally, I have
                 hands-on experience with GCP and Kubernetes, ensuring robust and
