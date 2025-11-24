@@ -7,7 +7,7 @@ export const About = ({ isDarkTheme }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [displayText, setDisplayText] = useState("");
-const fullText = `Hello there! 👋 I'm Charles, a Full Stack Software Engineer specializing in building scalable, high-performance systems. I work across backend, frontend, DevOps, and cloud, with strong expertise in Java, Spring Boot, microservices architecture, and the MERN/Next.js ecosystem.
+const fullText = `I'm Charles, a Full Stack Software Engineer specializing in building scalable, high-performance systems. I work across backend, frontend, DevOps, and cloud, with strong expertise in Java, Spring Boot, microservices architecture, and the MERN/Next.js ecosystem.
 
 I design and develop distributed systems, event-driven services, and modern cloud-native applications using tools such as Kafka, Redis, Docker, and Kubernetes. I also integrate robust monitoring and reliability practices with Sentry, Grafana, and OpenTelemetry.
 
@@ -139,7 +139,7 @@ Whether it's backend API design, frontend experiences, microservices, or cloud e
                     mb: 2
                   }}
                 >
-                  I'm Charles
+                  {/* I'm Charles */}
                 </Typography>
               </motion.div>
 
