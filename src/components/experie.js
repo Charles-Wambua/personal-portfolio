@@ -18,7 +18,7 @@ const Experience = ({ isDarkTheme }) => {
     {
       id: 'SPIRO',
       title: 'Software Engineer',
-      period: '2024.06 - Present',
+      period: '2025.06 - Present',
       company: 'Spiro(Africa Smart Mobility Solutions Kenya Ltd) ',
       location: 'Nairobi, Kenya',
       description: 'Building and maintaining high-performance backend microservices powering Spiro’s payment and customer onboarding operations across Africa.',
