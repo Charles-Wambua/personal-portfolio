@@ -63,7 +63,7 @@ export default function Projects({ isDarkTheme }) {
     {
       id: 1,
       title: "Softnova Lab",
-      link: "https://softnova-lab.onrender.com/",
+      link: "https://softnova-lab.vercel.app/",
       year: "2024",
       images: ["/assets/softnova1.PNG", "/assets/softnova2.PNG", "/assets/softnova3.PNG"],
       description: "Softnova Lab is an innovative platform designed to connect clients with top-tier software development services. The platform offers a seamless experience for users to explore various software solutions, engage with expert developers, and manage projects efficiently.",
