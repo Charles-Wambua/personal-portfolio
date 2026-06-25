@@ -1,33 +1,39 @@
-import { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';  
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';  
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import { About } from "./components/About";
+import { Skills } from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-import $ from 'jquery';
-import { About } from './components/About'
-import Projects from './components/Projects';
-import { Skills } from './components/Skills';
-import Banner from './components/Banner';
-import Experience from './components/experie';
-import Footer from './components/Footer';
-// import Experience from './components/Experience';
+const THEME_KEY = "cw-theme";
 
-
-window.$ = $;
 export default function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") return "dark";
+    return localStorage.getItem(THEME_KEY) || "dark";
+  });
 
-  const handleThemeToggle = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
+  useEffect(() => {
+    localStorage.setItem(THEME_KEY, theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+
   return (
- <div className={isDarkTheme ? "dark-theme" : "light-theme"}>
-   <Banner isDarkTheme={isDarkTheme} onToggleTheme={handleThemeToggle} />
-  <About  isDarkTheme={isDarkTheme} onToggleTheme={handleThemeToggle}/>
-  <Skills isDarkTheme={isDarkTheme} onToggleTheme={handleThemeToggle}/>
-  <Experience isDarkTheme={isDarkTheme} onToggleTheme={handleThemeToggle}/>
-  <Projects isDarkTheme={isDarkTheme} onToggleTheme={handleThemeToggle}/> 
-  <Footer isDarkTheme={isDarkTheme} onToggleTheme={handleThemeToggle}/>
-  </div>
+    <div className="app-root" data-theme={theme}>
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
