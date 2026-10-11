@@ -1,10 +1,12 @@
 import { ArrowUp } from "lucide-react";
 import { SOCIALS } from "./data";
+import { Logo } from "./Logo";
 import "./css/Footer.css";
 
 const NAV = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "architecture", label: "Architecture" },
   { id: "experience", label: "Experience" },
   { id: "work", label: "Work" },
   { id: "contact", label: "Contact" },
@@ -18,11 +20,7 @@ const Footer = () => {
       <div className="footer__inner">
         <div className="footer__top">
           <a href="#top" className="footer__brand">
-            <span className="footer__mark">CW</span>
-            <div>
-              <strong>Charles Wambua</strong>
-              <span>Software Engineer · Nairobi, Kenya</span>
-            </div>
+            <Logo size={44} tagline="Software engineer · Nairobi, KE" />
           </a>
 
           <nav className="footer__nav">

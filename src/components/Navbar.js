@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
+import { Logo } from "./Logo";
 import "./css/Navbar.css";
 
 const LINKS = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "architecture", label: "Architecture" },
   { id: "experience", label: "Experience" },
   { id: "work", label: "Work" },
   { id: "contact", label: "Contact" },
@@ -45,8 +47,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
     <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="nav__inner">
         <a href="#top" className="nav__brand" onClick={close}>
-          <span className="nav__brand-mark">CW</span>
-          <span className="nav__brand-text">Charles Wambua</span>
+          <Logo />
         </a>
 
         <nav className={`nav__links ${open ? "nav__links--open" : ""}`}>

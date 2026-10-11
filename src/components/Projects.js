@@ -1,14 +1,28 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+  ArrowRight,
   ArrowUpRight,
   ExternalLink,
   X,
   ChevronLeft,
   ChevronRight,
+  Globe,
+  Lock,
+  UserRound,
 } from "lucide-react";
 import { PROJECTS } from "./data";
 import "./css/Projects.css";
+
+const CATEGORIES = ["All", ...new Set(PROJECTS.map((p) => p.category))];
+
+const hostOf = (url) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+};
 
 const reveal = {
   hidden: { opacity: 0, y: 36 },
@@ -22,6 +36,10 @@ const reveal = {
 const Projects = () => {
   const [selected, setSelected] = useState(null);
   const [slide, setSlide] = useState(0);
+  const [filter, setFilter] = useState("All");
+
+  const visible =
+    filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
 
   const open = (project) => {
     setSelected(project);
@@ -62,58 +80,127 @@ const Projects = () => {
         <span className="section-eyebrow">Selected work</span>
         <h2 className="section-title">Projects &amp; case studies</h2>
         <p className="section-lead">
-          A selection of products I've designed, built, and shipped — across
-          full-stack platforms, mobile apps, and cloud infrastructure.
+          Products I've designed, built, and shipped across full-stack
+          platforms, mobile apps, and cloud infrastructure.
         </p>
       </motion.div>
+
+      <div className="projects__filters" role="tablist" aria-label="Filter projects">
+        {CATEGORIES.map((c) => (
+          <button
+            key={c}
+            role="tab"
+            aria-selected={filter === c}
+            className={`projects__filter ${filter === c ? "is-active" : ""}`}
+            onClick={() => setFilter(c)}
+          >
+            {c}
+            <span className="projects__filter-count">
+              {c === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.category === c).length}
+            </span>
+          </button>
+        ))}
+      </div>
 
       <motion.div
         className="projects__grid"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.05 }}
       >
-        {PROJECTS.map((project, i) => (
-          <motion.article
-            className="project glass"
-            key={project.id}
-            custom={i}
-            variants={reveal}
-            onClick={() => open(project)}
-          >
-            <div className="project__media">
-              <img
-                src={project.images[0]}
-                alt={`${project.title} — ${project.category} project screenshot`}
-                loading="lazy"
-                decoding="async"
-              />
-              <span className="project__category">{project.category}</span>
-              <span className="project__view">
-                View case study <ArrowUpRight size={16} />
-              </span>
-            </div>
-            <div className="project__body">
-              <div className="project__head">
-                <h3 className="project__title">{project.title}</h3>
-                <span className="project__year">{project.year}</span>
-              </div>
-              <p className="project__desc">{project.description}</p>
-              <div className="project__tags">
-                {project.technologies.slice(0, 4).map((t) => (
-                  <span className="chip" key={t}>
-                    {t}
-                  </span>
-                ))}
-                {project.technologies.length > 4 && (
-                  <span className="chip">
-                    +{project.technologies.length - 4}
-                  </span>
-                )}
-              </div>
-            </div>
-          </motion.article>
-        ))}
+        <AnimatePresence mode="popLayout">
+          {visible.map((project, i) => {
+            const host = hostOf(project.link);
+            return (
+              <motion.article
+                layout
+                className={`project glass ${i === 0 ? "project--featured" : ""}`}
+                key={project.id}
+                custom={i}
+                variants={reveal}
+                exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.2 } }}
+                onClick={() => open(project)}
+                onKeyDown={(e) => e.key === "Enter" && open(project)}
+                tabIndex={0}
+                aria-label={`${project.title}: open case study`}
+              >
+                <div className="project__stage">
+                  <div className="project__stack">
+                  {project.images[1] && (
+                    <div className="project__frame project__frame--back" aria-hidden="true">
+                      <img src={project.images[1]} alt="" loading="lazy" decoding="async" />
+                    </div>
+                  )}
+                  <div className="project__frame">
+                    <div className="project__chrome">
+                      <span className="project__dots">
+                        <i /> <i /> <i />
+                      </span>
+                      <span className="project__url">
+                        {host ? <Globe size={11} /> : <Lock size={11} />}
+                        {host || "private build"}
+                      </span>
+                    </div>
+                    <div className="project__shot">
+                      <img
+                        src={project.images[0]}
+                        alt={`${project.title} screenshot`}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+                <div className="project__body">
+                  <div className="project__meta">
+                    <span>
+                      <span className="project__index">
+                        {String(PROJECTS.indexOf(project) + 1).padStart(2, "0")}
+                      </span>
+                      {project.category}
+                    </span>
+                    <span>{project.year}</span>
+                  </div>
+                  <h3 className="project__title">{project.title}</h3>
+                  <p className="project__desc">{project.description}</p>
+                  {project.role && (
+                    <span className="project__role">
+                      <UserRound size={13} /> {project.role}
+                    </span>
+                  )}
+                  <div className="project__tags">
+                    {project.technologies.slice(0, 4).map((t) => (
+                      <span className="chip" key={t}>
+                        {t}
+                      </span>
+                    ))}
+                    {project.technologies.length > 4 && (
+                      <span className="chip">+{project.technologies.length - 4}</span>
+                    )}
+                  </div>
+                  <div className="project__actions">
+                    <span className="project__cta">
+                      Read case study <ArrowRight size={16} />
+                    </span>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project__live"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Live <ArrowUpRight size={15} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
+        </AnimatePresence>
       </motion.div>
 
       <AnimatePresence>

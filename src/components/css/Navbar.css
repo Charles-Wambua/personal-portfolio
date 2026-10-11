@@ -113,9 +113,19 @@
   display: none;
 }
 
+/* ---- Mid widths: six links + actions need the brand text's room ---- */
+@media (max-width: 1080px) {
+  .nav__brand .logo__text {
+    display: none;
+  }
+  .nav__link {
+    padding: 0.5rem 0.65rem;
+  }
+}
+
 /* ---- Mobile ---- */
 @media (max-width: 860px) {
-  .nav__brand-text {
+  .nav__brand .logo__text {
     display: none;
   }
 

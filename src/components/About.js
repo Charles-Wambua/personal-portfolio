@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
-import { Cpu, Cloud, GitBranch, Activity } from "lucide-react";
+import { Network, Braces, LayoutTemplate, Cloud } from "lucide-react";
 import "./css/About.css";
 
 const HIGHLIGHTS = [
   {
-    icon: <Cpu size={22} />,
-    title: "Distributed Systems",
-    body: "Horizontally scalable, event-driven services in Java/Spring Boot and Python with Kafka-based messaging and idempotent processing.",
+    icon: <Network size={22} />,
+    title: "Architecture & System Design",
+    body: "I turn ambiguous business problems into clear service boundaries, data models, and trade-offs. Documented, reviewed, and built to evolve.",
+  },
+  {
+    icon: <Braces size={22} />,
+    title: "APIs & Distributed Backends",
+    body: "Contract-first REST, gRPC and GraphQL APIs in Spring Boot, FastAPI and Node, with Kafka-driven workflows where consistency matters.",
+  },
+  {
+    icon: <LayoutTemplate size={22} />,
+    title: "Web & Mobile Frontends",
+    body: "React, Next.js and Flutter interfaces that are fast, accessible, and wired cleanly to the APIs behind them.",
   },
   {
     icon: <Cloud size={22} />,
-    title: "Cloud & Orchestration",
-    body: "Production-grade deployments on AWS & GCP with container orchestration on Kubernetes, Docker, and infrastructure-as-code.",
-  },
-  {
-    icon: <GitBranch size={22} />,
-    title: "Platform & DevOps",
-    body: "CI/CD pipelines, build automation, and deployment orchestration that keep teams shipping safely and fast.",
-  },
-  {
-    icon: <Activity size={22} />,
-    title: "Reliability & Observability",
-    body: "Performance optimization and end-to-end observability with Grafana, Sentry, and OpenTelemetry for resilient systems.",
+    title: "Cloud, Platform & Reliability",
+    body: "Kubernetes, Terraform and GitOps on GCP & AWS, with SLOs, tracing and alerting so production stays boring.",
   },
 ];
 
@@ -45,7 +45,7 @@ export const About = () => {
       >
         <span className="section-eyebrow">About</span>
         <h2 className="section-title">
-          Engineering systems that scale, with care
+          I solve the problems that break at scale
         </h2>
       </motion.div>
 
@@ -58,24 +58,27 @@ export const About = () => {
           variants={reveal}
         >
           <p>
-            I'm a Full-Stack Software Engineer focused on building scalable,
-            high-performance systems. I work across backend, frontend, DevOps,
-            and cloud — with deep expertise in <strong>Java</strong>,{" "}
-            <strong>Spring Boot</strong>, microservices architecture, and the{" "}
-            <strong>MERN / Next.js</strong> ecosystem.
+            I'm a full-stack software engineer. I build{" "}
+            <strong>APIs and backend services</strong>,{" "}
+            <strong>distributed, event-driven systems</strong>,{" "}
+            <strong>web and mobile frontends</strong>, and the{" "}
+            <strong>cloud platforms</strong> they run on, and I'm most useful
+            where those pieces meet.
           </p>
           <p>
-            I design distributed, event-driven services and cloud-native
-            applications using Kafka, Redis, Docker, and Kubernetes —
-            engineering for throughput, fault tolerance, and horizontal scale.
-            On the cloud side, I ship secure, production-grade deployments on
-            AWS and GCP, orchestrate containers, and build the CI/CD pipelines
-            and observability that keep them reliable.
+            At <strong>Spiro</strong> I build Java/Spring Boot and Python
+            microservices that orchestrate payments and onboarding across
+            multiple African markets. I integrate M-Pesa, MTN MoMo, Airtel
+            Money, T-Money, Moov Money, and TNM Mpamba behind one idempotent,
+            event-driven platform on Kafka, Redis, and Kubernetes, with USSD and
+            SMS journeys delivered through Africa's Talking.
           </p>
           <p>
-            Whether it's API design, frontend experiences, or platform
-            engineering, I'm driven by solving complex problems and delivering
-            clean, maintainable solutions.
+            Seven-plus years across startups, scale-ups, and Gebeya's
+            pan-African talent network taught me to own the whole lifecycle:
+            architecture, code, infrastructure, and the on-call pager. I also
+            build with AI: LLM-powered features, RAG pipelines, and agentic
+            tooling that make teams measurably faster.
           </p>
         </motion.div>
 

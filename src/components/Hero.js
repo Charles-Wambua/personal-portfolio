@@ -1,6 +1,16 @@
+import { Fragment } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowDownRight } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowDownRight,
+  Braces,
+  Network,
+  Wallet,
+  LayoutTemplate,
+  Cloud,
+  Sparkles,
+} from "lucide-react";
 import { SOCIALS, STATS } from "./data";
 import "./css/Hero.css";
 
@@ -12,6 +22,56 @@ const fade = (delay = 0) => ({
     transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
   },
 });
+
+const STRENGTHS = [
+  { icon: <Braces size={16} />, label: "APIs & backend services" },
+  { icon: <Network size={16} />, label: "Distributed systems" },
+  { icon: <LayoutTemplate size={16} />, label: "Web & mobile frontends" },
+  { icon: <Wallet size={16} />, label: "Payments & USSD" },
+  { icon: <Cloud size={16} />, label: "Cloud & DevOps" },
+  { icon: <Sparkles size={16} />, label: "AI-powered features" },
+];
+
+// Rendered as syntax-highlighted JSON. Array values wrap onto their own lines.
+const STATUS = [
+  ["role", "Software Engineer · Full Stack"],
+  ["company", "Spiro"],
+  ["backend", "Java · Spring · Python · Node"],
+  ["frontend", "React · Next.js · Flutter"],
+  ["platform", "Kafka · K8s · GCP · AWS"],
+  ["rails", ["M-Pesa", "MTN MoMo", "Airtel Money", "T-Money", "Moov Money", "TNM Mpamba"]],
+  ["location", "Nairobi, Kenya 🇰🇪"],
+  ["open_to_work", true],
+];
+
+const Value = ({ value }) => {
+  if (typeof value === "boolean") return <span className="tok-bool">{String(value)}</span>;
+  if (!Array.isArray(value)) return <span className="tok-str">"{value}"</span>;
+  // Wrap long arrays three-per-line to keep the card narrow.
+  const rows = [];
+  for (let i = 0; i < value.length; i += 3) rows.push(value.slice(i, i + 3));
+  const inline = rows.length === 1;
+  return (
+    <>
+      <span className="tok-punc">[</span>
+      {rows.map((row, r) => (
+        <Fragment key={r}>
+          {!inline && "\n    "}
+          {row.map((v, i) => (
+            <Fragment key={v}>
+              <span className="tok-str">"{v}"</span>
+              {(r < rows.length - 1 || i < row.length - 1) && (
+                <span className="tok-punc">, </span>
+              )}
+            </Fragment>
+          ))}
+        </Fragment>
+      ))}
+      {!inline && "\n  "}
+      <span className="tok-punc">]</span>
+    </>
+  );
+};
 
 const Hero = () => {
   return (
@@ -35,13 +95,17 @@ const Hero = () => {
           <motion.div className="hero__role" variants={fade(0.1)}>
             <TypeAnimation
               sequence={[
-                "Backend & Cloud Engineer",
-                2200,
-                "Microservices Architect",
-                2200,
                 "Full-Stack Software Engineer",
                 2200,
-                "DevOps & Platform Engineer",
+                "Backend & API Engineer",
+                2200,
+                "Distributed Systems Engineer",
+                2200,
+                "React & Flutter Developer",
+                2200,
+                "Payments Platform Engineer",
+                2200,
+                "Cloud & DevOps Engineer",
                 2200,
               ]}
               speed={50}
@@ -52,16 +116,25 @@ const Hero = () => {
           </motion.div>
 
           <motion.p className="hero__lead" variants={fade(0.15)}>
-            I design and build scalable, high-performance systems — from
-            event-driven microservices and payment orchestration to
-            cloud-native infrastructure and container orchestration on
-            Kubernetes. Currently optimizing high-throughput payment systems
-            across multiple African markets.
+            I design and build software end to end: clean, well-documented
+            APIs and backend services, event-driven distributed systems, fast
+            React and Flutter frontends, and the cloud platforms underneath. My
+            deepest work is in fintech, orchestrating six mobile-money rails
+            across Africa.
           </motion.p>
 
+          <motion.ul className="hero__strengths" variants={fade(0.18)}>
+            {STRENGTHS.map((s) => (
+              <li key={s.label}>
+                <span className="hero__strength-icon">{s.icon}</span>
+                {s.label}
+              </li>
+            ))}
+          </motion.ul>
+
           <motion.div className="hero__cta" variants={fade(0.2)}>
-            <a href="#work" className="btn btn-primary">
-              View my work <ArrowRight size={18} />
+            <a href="#architecture" className="btn btn-primary">
+              See the architecture <ArrowRight size={18} />
             </a>
             <a href="#contact" className="btn btn-ghost">
               Get in touch <ArrowDownRight size={18} />
@@ -100,30 +173,15 @@ const Hero = () => {
             <pre className="hero__code">
               <code>
                 <span className="tok-punc">{"{"}</span>
-                {"\n  "}
-                <span className="tok-key">"role"</span>
-                <span className="tok-punc">: </span>
-                <span className="tok-str">"Software Engineer"</span>,
-                {"\n  "}
-                <span className="tok-key">"company"</span>
-                <span className="tok-punc">: </span>
-                <span className="tok-str">"Spiro"</span>,
-                {"\n  "}
-                <span className="tok-key">"focus"</span>
-                <span className="tok-punc">: </span>
-                <span className="tok-str">"payments · cloud · scale"</span>,
-                {"\n  "}
-                <span className="tok-key">"stack"</span>
-                <span className="tok-punc">: </span>
-                <span className="tok-str">"Java · Spring · Kafka · K8s"</span>,
-                {"\n  "}
-                <span className="tok-key">"location"</span>
-                <span className="tok-punc">: </span>
-                <span className="tok-str">"Nairobi, Kenya 🇰🇪"</span>,
-                {"\n  "}
-                <span className="tok-key">"open_to_work"</span>
-                <span className="tok-punc">: </span>
-                <span className="tok-bool">true</span>
+                {STATUS.map(([key, value], i) => (
+                  <Fragment key={key}>
+                    {"\n  "}
+                    <span className="tok-key">"{key}"</span>
+                    <span className="tok-punc">: </span>
+                    <Value value={value} />
+                    {i < STATUS.length - 1 && <span className="tok-punc">,</span>}
+                  </Fragment>
+                ))}
                 {"\n"}
                 <span className="tok-punc">{"}"}</span>
               </code>

@@ -29,8 +29,8 @@ const Experience = () => {
         <span className="section-eyebrow">Career</span>
         <h2 className="section-title">Professional experience</h2>
         <p className="section-lead">
-          Five-plus years across startups, scale-ups, and global engineering
-          teams — shipping production systems end to end.
+          Seven-plus years across startups, scale-ups, and pan-African engineering
+          teams, shipping production systems end to end.
         </p>
       </motion.div>
 

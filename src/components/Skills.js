@@ -21,10 +21,14 @@ export const Skills = () => {
         variants={reveal}
       >
         <span className="section-eyebrow">Toolbox</span>
-        <h2 className="section-title">Skills &amp; technologies</h2>
+        <h2 className="section-title">Capabilities &amp; stack</h2>
         <p className="section-lead">
-          The stack I reach for, organized by where it lives in the system —
-          from APIs and messaging to cloud, data, and observability.
+          Organized by where it lives in the system: distributed backends,
+          event streaming, mobile money and USSD, cloud platforms, AI, and
+          reliability.
+          <span className="skills__legend">
+            <span className="chip chip--core">Highlighted</span> = core depth I lead with.
+          </span>
         </p>
       </motion.div>
 
@@ -36,7 +40,7 @@ export const Skills = () => {
       >
         {SKILL_GROUPS.map((group, i) => (
           <motion.div
-            className="skills__card glass"
+            className={`skills__card glass ${group.wide ? "skills__card--wide" : ""}`}
             key={group.title}
             custom={i}
             variants={reveal}
@@ -49,7 +53,10 @@ export const Skills = () => {
             </div>
             <div className="skills__tags">
               {group.skills.map((skill) => (
-                <span className="chip" key={skill}>
+                <span
+                  className={`chip ${group.core?.includes(skill) ? "chip--core" : ""}`}
+                  key={skill}
+                >
                   {skill}
                 </span>
               ))}

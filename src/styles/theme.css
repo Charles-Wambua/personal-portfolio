@@ -300,3 +300,11 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+/* Emphasized chip — marks core / lead-level skills */
+.chip--core {
+  color: var(--accent);
+  border-color: var(--accent-glow);
+  background: var(--accent-soft);
+  font-weight: 500;
+}

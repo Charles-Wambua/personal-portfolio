@@ -37,7 +37,7 @@ const Contact = () => {
         },
         EMAILJS_CONFIG.publicKey
       );
-      setStatus({ state: "success", msg: "Message sent — I'll get back to you soon. 🎉" });
+      setStatus({ state: "success", msg: "Message sent! I'll get back to you soon. 🎉" });
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
       console.error("EmailJS error:", err);
